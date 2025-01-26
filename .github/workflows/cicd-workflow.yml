@@ -13,17 +13,17 @@ jobs:
       - name: Login to docker hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} 
       - name: Build docker image
-        run: docker build -t 1Preeti6/devopsassignment .
+        run: docker build -t preetilakhera/devopsassignment .
       - name: Publish image to docker hub
-        run: docker push 1Preeti6/devopsassignment:latest
+        run: docker push preetilakhera/devopsassignment:latest
         
   deploy:
     needs: build
     runs-on: aws-ec2
     steps:
       - name: Pull image from docker hub
-        run: docker pull 1Preeti6/devopsassignment:latest
+        run: docker pull preetilakhera/devopsassignment:latest
       - name: Delete old container
         run: docker rm -f nodejs-app-container
       - name: Run docker container
-        run: docker run -d -p 3000:3000 --name nodejs-app-container 1Preeti6/devopsassignment
+        run: docker run -d -p 3000:3000 --name nodejs-app-container preetilakhera/devopsassignment
