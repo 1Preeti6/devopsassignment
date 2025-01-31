@@ -1,9 +1,9 @@
 # devopsAssignment
 
 ### Project Overview
-A comprehensive DevOps project demonstrating containerization, infrastructure as code, and CI/CD pipeline implementation.
-Technologies Used
+My DevOps project demonstrating containerization, infrastructure as code, and CI/CD pipeline implementation.
 
+Technologies Used
 - Node.js
 - Docker
 - Terraform
@@ -13,14 +13,13 @@ Technologies Used
 ### Project Structure
 ├── package.json
 ├── package-lock.json
-├── server.js           # Node.js Express application
-├── Dockerfile          # Docker containerization
-├── main.tf             # Terraform infrastructure script
+├── server.js           
+├── Dockerfile         
+├── main.tf             
 └── .github/workflows/
-    └── cicd-workflow.yml  # GitHub Actions CI/CD pipeline
+    └── cicd-workflow.yml 
 
 ### Prerequisites
-
 - Docker
 - Terraform
 - AWS Account
